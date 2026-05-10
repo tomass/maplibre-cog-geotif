@@ -1,0 +1,8 @@
+services:
+  cog-server:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
